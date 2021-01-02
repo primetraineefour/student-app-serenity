@@ -100,5 +100,19 @@ public class StudentSteps {
                 .then();
     }
 
+    @Step("Getting the student information with email: {0}")
+    public HashMap<String, Object> getStudentInfoByEmail(String email) {
+        String p1 = "findAll{it.email=='";
+        String p2 = "'}.get(0)";
+
+        HashMap<String, Object> value = SerenityRest.rest().given()
+                .when()
+                .get(EndPoints.GET_ALL_STUDENT)
+                .then()
+                .extract()
+                .path(p1 + email + p2);
+        return value;
+    }
+
 
 }

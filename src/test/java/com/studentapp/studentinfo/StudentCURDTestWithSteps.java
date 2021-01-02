@@ -2,11 +2,9 @@ package com.studentapp.studentinfo;
 
 import com.studentapp.testbase.TestBase;
 import com.studentapp.utils.TestUtils;
-import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Title;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +16,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by Jay
  */
-@RunWith(SerenityRunner.class)
+//@RunWith(SerenityRunner.class)
 public class StudentCURDTestWithSteps extends TestBase {
 
     static String firstName = "PRIMEUSER" + TestUtils.getRandomValue();
